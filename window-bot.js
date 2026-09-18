@@ -48,7 +48,7 @@
         bot.style.transform = `translate3d(${-this.size * 2}px,0,0)`;
         const glint = document.createElement('div'); glint.className = 'wb-glint';
         layer.append(canvas, bot, glint); this.hero.append(layer);
-        const skip = this.skip = document.createElement('button'); skip.className = 'wb-skip'; skip.textContent = '跳过'; skip.onclick = () => this.finish('Your clear view is ready.'); this.hero.append(skip);
+        const skip = this.skip = document.createElement('button'); skip.className = 'wb-skip'; skip.textContent = 'Skip'; skip.onclick = () => this.finish('Your clear view is ready.'); this.hero.append(skip);
         memoryPlayed = true; try { sessionStorage.setItem(KEY, '1'); } catch { /* In-memory fallback. */ }
         const s = this.size, w = this.w, h = this.h;
         const points = this.mobile ? [[w / 2, -s * .55], [w / 2, h + s * .55]] : [[-s * .55, h * .23], [w + s * .55, h * .23], [w + s * .55, h * .77], [-s * .55, h * .77]];
