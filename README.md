@@ -1,6 +1,26 @@
-# Window Bot entrance demo
+# Window Bot — Homepage Entrance Animation
 
-Run `npm start`, then open http://localhost:4173. No installation or build step is needed.
+A small interaction prototype: a robot travels across a sample homepage hero and wipes away a dirt overlay along its path, revealing the page beneath it.
+
+[Watch the recorded demo](demo-preview.mp4) · [My portfolio](https://www.jackzhang.ca/)
+
+## What to look at
+
+- The cleaning effect follows the robot's contact patch rather than fading the whole image.
+- Desktop and mobile use different motion paths and timings.
+- Skip, reduced-motion and failure handling keep the underlying page accessible.
+
+## Run locally
+
+The repository contains static HTML, CSS and JavaScript; it has no `package.json` or npm start script. With Python 3 installed, run from the repository root:
+
+```sh
+python -m http.server 4173 --bind 127.0.0.1
+```
+
+Open [localhost:4173](http://localhost:4173). Use `python3` if that is your system's Python command. No dependency installation or build step is required. Stop the server with Ctrl+C.
+
+## Prototype scope
 
 This is an animation proof of concept on a sample hero, not a replacement for the client's homepage. The logo and SVG robot are provisional original artwork; replace them with approved Window Bot assets. The sample interior photograph is from Unsplash. Google Fonts are optional; system fonts are the fallback.
 
