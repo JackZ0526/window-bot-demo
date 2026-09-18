@@ -10,14 +10,5 @@
   replay.addEventListener('click', () => {
     entrance.play({ force: true });
   });
-  const record = new URLSearchParams(location.search).has('record');
-  if (record) {
-    document.documentElement.classList.add('record-mode');
-    try { sessionStorage.clear(); } catch {}
-    const loop = () => entrance.play({ force: true });
-    loop();
-    setInterval(loop, 4500);
-    return;
-  }
   entrance.play();
 })();
